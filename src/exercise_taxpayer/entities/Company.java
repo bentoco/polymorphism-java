@@ -1,15 +1,23 @@
 package exercise_taxpayer.entities;
 
 public class Company extends TaxPayer {
-    public Company() {
+    private Integer numberOfEmployees;
+
+    public Company(String name, Double anualInCome, Integer numberOfEmployees) {
+        super(name, anualInCome);
+        this.numberOfEmployees = numberOfEmployees;
     }
 
-    public Company(String name, Double anualInCome) {
-        super(name, anualInCome);
+    public Integer getNumberOfEmployees() {
+        return numberOfEmployees;
+    }
+
+    public void setNumberOfEmployees(Integer numberOfEmployees) {
+        this.numberOfEmployees = numberOfEmployees;
     }
 
     @Override
     public double tax() {
-        return 0;
+        return getNumberOfEmployees() > 10 ? getAnualInCome() * 0.14 : getAnualInCome() * 0.16;
     }
 }
