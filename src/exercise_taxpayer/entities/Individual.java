@@ -8,6 +8,9 @@ public class Individual extends TaxPayer {
         this.healthExpenditures = healthExpenditures; // this referência o atributo da class Individual
     }
 
+    public Individual(){
+    }
+
     public Double getHealthExpenditures() {
         return healthExpenditures;
     }
