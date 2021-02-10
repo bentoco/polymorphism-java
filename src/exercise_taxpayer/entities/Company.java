@@ -8,9 +8,6 @@ public class Company extends TaxPayer {
         this.numberOfEmployees = numberOfEmployees;
     }
 
-    public Company(){
-    }
-
     public Integer getNumberOfEmployees() {
         return numberOfEmployees;
     }
